@@ -32,13 +32,4 @@ public class TestUnitarios {
         boolean a = UtilidadesCliente.esDniValido(null);
     }
 
-    @Test
-    public void empleadoPorContrato(){
-        List<Empleado> trabajadorContrato = new ArrayList<>();
-        Empresa b = new Empresa(12,"54asdas", trabajadorContrato, TipoEmpresa.MULTINACIONAL);
-        Contrato c = new Contrato(15, 1250.09, modelos.TipoContrato.PRACTICAS);
-        Empleado e = new Empleado(2, "48964251L", "Miguel", "Carrasco", "Calle", "685432145", b, c, modelos.TipoContrato.PRACTICAS);
-
-    }
-
 }
