@@ -49,7 +49,7 @@ public class UtilidadesEmpresa {
             empleadoCobrado.addAll(m.getEmpleados());
         }
         empleadoCobrado.sort(Comparator.comparing(c-> c.getContrato().getSalarioBase()));
-        mejorpagado = empleadoCobrado.get(0);
+        mejorpagado = empleadoCobrado.get(empleadoCobrado.size()-1);
 
         return mejorpagado;
 
@@ -82,7 +82,7 @@ public class UtilidadesEmpresa {
             return empleadoagrupados;
     }
 
-    public Map<Empresa, Map<TipoContrato, List<Empleado>>> getEmpleadosPorTipoEmpresa(List<Empresa> empresas){
+    public Map<Empresa, Map<TipoContrato, List<Empleado>>> getEmpleadosPorTipoContrato(List<Empresa> empresas){
 
         Map<Empresa, Map<TipoContrato, List<Empleado>>> listaEmpresa = new HashMap<>();
 
@@ -120,29 +120,6 @@ public class UtilidadesEmpresa {
         return mejorPagado;
     }
 
-    public static List<Empresa> crearListaEmpresa() {
-        List<Empresa> listaCoches = new ArrayList<>();
-
-
-
-        //Creamos los cohces
-        List<Empleado> trabajadorContrato = null;
-        Empresa b = new Empresa(12,"54asdas", UtilidadesEmpleado, TipoEmpresa.MULTINACIONAL);
-        Empresa b1 = new Empresa(15,"16556asd", trabajadorContrato, TipoEmpresa.MULTINACIONAL);
-        Empresa b2 = new Empresa(20,"asdjasñ89", trabajadorContrato, TipoEmpresa.MULTINACIONAL);
-        Empresa b3 = new Empresa(30,"sadasPa", trabajadorContrato, TipoEmpresa.MULTINACIONAL);
-        trabajadorContrato.add(b);
-        trabajadorContrato.add(b1);
-        trabajadorContrato.add(b2);
-        trabajadorContrato.add(b3);
-
-        //Ponemos a los coches su marca
-        List<Marca> marcas = UtilidadesMarca.crearListaMarcas();
-        listaCoches.stream().forEach(c -> c.setMarca(marcas.get(listaCoches.indexOf(c))));
-        listaCoches.stream().forEach(c -> c.setColor(Color.colorList().get(Utilidades.getRandomNumber(0,Color.colorList().size()-1))));
-
-        return listaCoches;
-    }
 
 
 

@@ -35,9 +35,6 @@ public class TestUnitarios {
     @Test
     public void empleadoPorContrato(){
         List<Empleado> trabajadorContrato = new ArrayList<>();
-        int identificador, String codigoEmpresa, List<Empleado> empleados, TipoEmpresa empresa
-        int identificador, double salarioBase, TipoContrato practicas
-        identificador, String dni, String nombre, String apellidos, String direccion, String numTelefono, Empresa empresa, Contrato contrato, TipoContrato tipoContrato)
         Empresa b = new Empresa(12,"54asdas", trabajadorContrato, TipoEmpresa.MULTINACIONAL);
         Contrato c = new Contrato(15, 1250.09, modelos.TipoContrato.PRACTICAS);
         Empleado e = new Empleado(2, "48964251L", "Miguel", "Carrasco", "Calle", "685432145", b, c, modelos.TipoContrato.PRACTICAS);
